@@ -12,7 +12,7 @@
       margin: 0;
       font-family: Roboto, Arial, sans-serif;
       font-size: 14px; 
-      color: #fff;
+      color: #000;
       }
       input, textarea { 
       outline: none;
@@ -202,6 +202,9 @@ display: block;
             </span>
           </h1>
           <input type="text" placeholder="Enter your comment"  name="message" value="">
+          
+          <button type="submit" value="Submit">Submit</button>
+
           <h4>Output:</h4>
           <p class = "result">
             {% for key,value in result.items() %}
@@ -209,7 +212,6 @@ display: block;
           {% endfor %}
         </p>
           
-          <button type="submit" value="Submit">Submit</button>
         </div>
        
       </form>
