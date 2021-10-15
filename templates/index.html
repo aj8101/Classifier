@@ -12,7 +12,7 @@
       margin: 0;
       font-family: Roboto, Arial, sans-serif;
       font-size: 14px; 
-      color: #666;
+      color: #fff;
       }
       input, textarea { 
       outline: none;
@@ -22,7 +22,18 @@
       justify-content: center;
       align-items: center;
       padding: 20px;
-      background: #1c87c9;
+      background: #000000;
+      background-image: url("xyz.jpg");
+      background-repeat: no-repeat;
+  	  background-size: cover;
+
+      /*background-position: 0px; */
+ 
+      }
+
+      .bg{
+      	background: rgba(255, 255, 255, 0.2);
+  		backdrop-filter: blur(8px); 
       }
       h1 {
       margin-top: 0;
@@ -32,26 +43,26 @@
       position: relative;
       width: 80%;
       border-radius: 30px;
-      background: #fff;
+      background: #C6CBCB;
       }
       .form-left-decoration,
       .form-right-decoration {
       content: "";
       position: absolute;
       width: 50px;
-      height: 20px;
+      /*height: 20px;*/
       border-radius: 20px;
       background: #1c87c9;
       }
-      .form-left-decoration {
+     /* .form-left-decoration {
       bottom: 60px;
       left: -30px;
-      }
-      .form-right-decoration {
+      }*/
+      /*.form-right-decoration {
       top: 60px;
       right: -30px;
-      }
-      .form-left-decoration:before,
+      }*/
+      ./*form-left-decoration:before,
       .form-left-decoration:after,
       .form-right-decoration:before,
       .form-right-decoration:after {
@@ -61,8 +72,8 @@
       height: 20px;
       border-radius: 30px;
       background: #fff;
-      }
-      .form-left-decoration:before {
+      }*/
+      ./*form-left-decoration:before {
       top: -20px;
       }
       .form-left-decoration:after {
@@ -76,7 +87,7 @@
       .form-right-decoration:after {
       top: 20px;
       right: 10px;
-      }
+      }*/
       .circle {
       position: absolute;
       bottom: 80px;
@@ -97,7 +108,7 @@
       margin-bottom: 10px;
       border: none;
       border-radius: 20px;
-      background: #d0dfe8;
+      background: #fff;
       }
        .result
 {
@@ -107,7 +118,7 @@ display: block;
       margin-bottom: 10px;
       border: none;
       border-radius: 20px;
-      background: #d0dfe8;
+      background: #fff;
 }
       .form-inner textarea {
       resize: none;
@@ -118,14 +129,15 @@ display: block;
       margin-top: 20px;
       border-radius: 20px;
       border: none;
-      border-bottom: 4px solid #095484;
-      background: #1c87c9; 
+/*      border-bottom: 4px solid #095484;
+*/      background: #fff; 
       font-size: 16px;
       font-weight: 400;
-      color: #fff;
+      color: #000;
       }
       button:hover {
-      background: #095484;
+      background: #000;
+      color: #fff;
       } 
       @media (min-width: 568px) {
       form {
@@ -176,6 +188,7 @@ display: block;
     <title>Toxic Comment Classification</title>
 </head>
 <body>
+	<div class='bg'></div>
     <form method="post">
         <div class="form-left-decoration"></div>
         <div class="form-right-decoration"></div>
@@ -206,30 +219,30 @@ display: block;
         var textWrapper = document.querySelector('.ml1 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml1 .letter',
-    scale: [0.3,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 600,
-    delay: (el, i) => 70 * (i+1)
-  }).add({
-    targets: '.ml1 .line',
-    scaleX: [0,1],
-    opacity: [0.5,1],
-    easing: "easeOutExpo",
-    duration: 700,
-    offset: '-=875',
-    delay: (el, i, l) => 80 * (l - i)
-  }).add({
-    targets: '.ml1',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
+// anime.timeline({loop: true})
+//   .add({
+//     targets: '.ml1 .letter',
+//     scale: [0.3,1],
+//     opacity: [0,1],
+//     translateZ: 0,
+//     easing: "easeOutExpo",
+//     duration: 600,
+//     delay: (el, i) => 70 * (i+1)
+//   }).add({
+//     targets: '.ml1 .line',
+//     scaleX: [0,1],
+//     opacity: [0.5,1],
+//     easing: "easeOutExpo",
+//     duration: 700,
+//     offset: '-=875',
+//     delay: (el, i, l) => 80 * (l - i)
+//   }).add({
+//     targets: '.ml1',
+//     opacity: 0,
+//     duration: 1000,
+//     easing: "easeOutExpo",
+//     delay: 1000
+//   });
 
     </script>
 
